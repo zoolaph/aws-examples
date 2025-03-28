@@ -18,8 +18,6 @@ if [[ -n "$AWS_ACCESS_KEY_ID" && -n "$AWS_SECRET_ACCESS_KEY" ]]; then
 [default]
 AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-AWS_DEFAULT_REGION=eu-west-3
-AWS_CLI_AUTO_PROMPT=on-partial
 EOF
     chmod 600 ~/.aws/credentials
 fi
