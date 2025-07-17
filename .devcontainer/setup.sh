@@ -13,8 +13,11 @@ sudo apt-get install -y software-properties-common
 sudo add-apt-repository universe
 sudo apt-get update
 
-# Install Ruby
-sudo apt-get install -y ruby-full
+echo "Installing Ruby..."
+if ! sudo apt-get install -y ruby-full; then
+    echo "❌ Ruby installation failed"
+    exit 1
+fi
 aws --version
 
 # Configure AWS credentials (Optional: Set up default profile)
